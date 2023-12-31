@@ -58,6 +58,16 @@ body {
     color: #C89B3C;
 }
 
+.rank-container {
+    display: none;
+    border: 1px solid #000; /* Change the color as needed */
+    border-radius: 10px; /* Adjust as needed */
+    padding: 20px; /* Adjust as needed */
+    margin: 10px 0; /* Adjust as needed */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow */
+    background-color: #fff; /* Change the color as needed */
+}
+
 #search_button{
     transform: translateY(20px);
     left: 50px;
