@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GemStats.gg</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="center">
+        <div class="logo-container">
+            <h1 class="logo"><span>Gem</span>Stats</h1>
+        </div>
+        <div class="input-group">
+            <h2>Summoner name:</h2> <input type="text" id="summoner_name"></br>
+            <select id="choose_region" onclick="chooseRegion()">
+                <option value="0">BR</option>
+                <option value="1">EUN</option>
+                <option value="2">EUW</option>
+                <option value="3">JP</option>
+                <option value="4">KR</option>
+                <option value="5">LA1</option>
+                <option value="6">LA2</option>
+                <option value="7">NA</option>
+                <option value="8">OC</option>
+                <option value="9">TRI</option>
+                <option value="10">RU</option>
+                <option value="11">PH2</option>
+                <option value="12">SG2</option>
+                <option value="13">TH</option>
+                <option value="14">TW</option>
+                <option value="15">VN</option>
+            </select>
+        </div>
+        <input type="button" id="search_button" value="Search For Summoner" onClick="Search_summoner()">
+    </div>
+    <div class="summonerInfo">
+        <div id="summoner_name_data"></div>
+        <div id="summonerlevel_data"></div>
+        <div id="summonerprofilepic_data">
+            <img id="summonerprofile_picture" src="">
+        </div>
+        <div id="summoner_ranked_data"></div>
+        <img id="rank_image" src="">
+    </div>
+</body>
+</html>
+

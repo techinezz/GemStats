@@ -1,0 +1,99 @@
+body {
+    background-color: #0A1428;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    transform: translateY(-40%);
+}
+
+.logo-container {
+    width: 700px; /* Adjust as needed */
+    height: 300px;
+    background-image: url('images/gemLogo.jpg'); /* Replace 'your-image.jpg' with your actual image file name */
+    background-size: cover; /* This will make the image cover the entire container */
+    background-position: center; /* This will center the image in the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    font-family: 'Times New Roman', serif; /* This is a placeholder, replace with a font that closely resembles the LoL logo font if available */
+    font-size: 4em; /* Adjust as needed */
+    color: #C89B3C;
+    text-shadow: 2px 2px #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transform: translateY(80px);
+}
+
+.logo span {
+    color: #e100ff;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust this value as needed */
+}
+
+.input-group h2{
+    color: #C89B3C;
+    text-shadow: 2px 2px #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.summonerInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translateY(-800px);
+    color: #C89B3C;
+}
+
+#search_button{
+    transform: translateY(20px);
+    left: 50px;
+}
+#summoner_name {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#choose_region {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-size: 12px; /* Adjust as needed */
+    background-position: right 10px center; /* Adjust as needed */
+    background-color: #fff; /* Adjust as needed */
+}
+
+#search_button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search_button:hover {
+    background-color: #0056b3;
+}
+
