@@ -53,11 +53,11 @@ async function data() {
     console.log(rankedData);
     
     // Ranked data
-    const { tier: tier1, rank: rank1, wins: wins1, losses: losses1, queueType: queueType1, leaguePoints: leaguePoints1 } = rankedData[0];
-    document.getElementById("summoner_ranked_data1").innerHTML = `Tier: ${tier1}, Rank: ${rank1}, Wins: ${wins1}, Losses: ${losses1}, Queue Type: ${queueType1}, LP: ${leaguePoints1}`;
+    const { tier: tier1, rank: rank1, wins: wins1, losses: losses1, leaguePoints: leaguePoints1 } = rankedData[0];
+    document.getElementById("summoner_ranked_data1").innerHTML = `Tier: ${tier1.toLowerCase()}, Rank: ${rank1}, LP: ${leaguePoints1}, Wins: ${wins1}, Losses: ${losses1}`;
     
-    const { tier: tier2, rank: rank2, wins: wins2, losses: losses2, queueType: queueType2, leaguePoints: leaguePoints2 } = rankedData[1];
-    document.getElementById("summoner_ranked_data2").innerHTML += `<br>Tier: ${tier2}, Rank: ${rank2}, Wins: ${wins2}, Losses: ${losses2}, Queue Type: ${queueType2}, LP: ${leaguePoints2}`;
+    const { tier: tier2, rank: rank2, wins: wins2, losses: losses2, leaguePoints: leaguePoints2 } = rankedData[1];
+    document.getElementById("summoner_ranked_data2").innerHTML += `<br>Tier: ${tier2}, Rank: ${rank2}, LP: ${leaguePoints2}, Wins: ${wins2}, Losses: ${losses2}`;
 
     //Rank Image for Ranked Solo
     var rankImageElement = document.getElementById("rank_image1");
@@ -75,5 +75,7 @@ async function data() {
         container.style.display = 'block';
     }
 
+    const summonerInfoDiv = document.querySelector('.summonerInfo');
+    summonerInfoDiv.style.display = 'block';
 
 }

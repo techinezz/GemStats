@@ -1,109 +1,138 @@
-body {
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #0A1428;
 }
 
-.center {
+.card-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    height: 100vh;
-    transform: translateY(-40%);
-}
-
-.logo-container {
-    width: 700px; /* Adjust as needed */
-    height: 300px;
-    background-image: url('images/gemLogo.jpg'); /* Replace 'your-image.jpg' with your actual image file name */
-    background-size: cover; /* This will make the image cover the entire container */
-    background-position: center; /* This will center the image in the container */
-    display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
-}
-
-.logo {
-    font-family: 'Times New Roman', serif; /* This is a placeholder, replace with a font that closely resembles the LoL logo font if available */
-    font-size: 4em; /* Adjust as needed */
-    color: #C89B3C;
-    text-shadow: 2px 2px #000;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transform: translateY(80px);
-}
-
-.logo span {
-    color: #e100ff;
-}
-
-.input-group {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Adjust this value as needed */
-}
-
-.input-group h2{
-    color: #C89B3C;
-    text-shadow: 2px 2px #000;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-.summonerInfo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    transform: translateY(-800px);
-    color: #C89B3C;
-}
-
-.rank-container {
-    display: none;
     border: 1px solid #000; /* Change the color as needed */
     border-radius: 10px; /* Adjust as needed */
     padding: 20px; /* Adjust as needed */
-    margin: 10px 0; /* Adjust as needed */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow */
+    background: linear-gradient(to right, #005A82, #0AC8B9);
+    width: 1000px; /* Adjust as needed */
+    height: 1000px; /* Adjust as needed */
+}
+
+.search-section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-520px, -520px);
+}
+
+.logo-container {
+    background-image: url('images/gemLogo.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 1000px; /* Adjust as needed */
+    height: 280px; /* Adjust as needed */
+}
+
+.logo {
+    font-weight: bold;
+    font-family: 'Fracas', sans-serif;
+    font-size: 6em; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-part1 {
+    transform: translateX(-60px); /* Adjust as needed */
+    color: purple;
+}
+
+.logo-part2 {
+    transform: translateX(100px);
+    /* Create a background gradient */
+    background: linear-gradient(to right, #785A28, #C89B3C);
+    /* Clip the background to the text */
+    -webkit-background-clip: text;
+
+    /* Make the text transparent so the background shows through */ 
+    color: transparent;
+}
+
+.search-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Adjust as needed */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+
+.input-group h2 {
+    color: purple; /* Change the color as needed */
+    font-size: 1.5em; /* Adjust as needed */
+    text-align: center; /* Centers the text */
+}
+
+#summoner_name {
+    font-size: 1.3rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #005A82; /* Change the color as needed */
+    background-color: #fff; /* Change the color as needed */
+}
+
+#summoner_name:focus {
+    outline: none; /* Removes the default blue outline */
+    border: 1px solid purple; /* Change the color as needed */
+}
+
+#choose_region {
+    padding: 13px; /* Adjust as needed */
+    border-radius: 5px; /* Adjust as needed */
+    border: 1px solid #005A82; /* Change the color as needed */
+    background-color: #fff; /* Change the color as needed */
+    font-size: .8rem;
+    transform: translateY(-3px);
+}
+
+#search_button {
+    padding: 10px 20px; /* Adjust as needed */
+    border-radius: 5px; /* Adjust as needed */
+    border: none; /* Removes the default border */
+    background-color: #0AC8B9; /* Change the color as needed */
+    color: #fff; /* Change the color as needed */
+    cursor: pointer; /* Changes the cursor to a hand when hovering over the button */
+}
+
+.summonerInfo-container {
+    /* Other styles... */
+    transform: translate(-230px, 280px);
+}
+
+.main-rank{
+    transform: translateX(250px);
+}
+
+.rank-container1{
+    margin-bottom: 20px;
+}
+
+#rank-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #000; /* Change the color as needed */
+    border-radius: 10px; /* Adjust as needed */
+    padding: 20px; /* Adjust as needed */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow */
     background-color: #fff; /* Change the color as needed */
 }
 
-#search_button{
-    transform: translateY(20px);
-    left: 50px;
+#rank-container img {
+    width: 50px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
 }
-#summoner_name {
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-#choose_region {
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-size: 12px; /* Adjust as needed */
-    background-position: right 10px center; /* Adjust as needed */
-    background-color: #fff; /* Adjust as needed */
-}
-
-#search_button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: none;
-    background-color: #007BFF;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#search_button:hover {
-    background-color: #0056b3;
-}
-
