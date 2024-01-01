@@ -71,9 +71,14 @@ body, html {
 }
 
 .input-group h2 {
-    color: purple; /* Change the color as needed */
-    font-size: 1.5em; /* Adjust as needed */
+    font-size: 2.5em; /* Adjust as needed */
     text-align: center; /* Centers the text */
+    font-weight: bold;
+    background: linear-gradient(to right, #d16aff, #660094);
+    /* Clip the background to the text */
+    -webkit-background-clip: text;
+    /* Make the text transparent so the background shows through */
+    color: transparent;
 }
 
 #summoner_name {
@@ -105,6 +110,7 @@ body, html {
     background-color: #0AC8B9; /* Change the color as needed */
     color: #fff; /* Change the color as needed */
     cursor: pointer; /* Changes the cursor to a hand when hovering over the button */
+    margin-top: 10px;
 }
 
 .summonerInfo-container {
