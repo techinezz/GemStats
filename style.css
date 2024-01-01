@@ -147,3 +147,17 @@ body, html {
     width: 50px; /* Adjust as needed */
     height: 50px; /* Adjust as needed */
 }
+
+#summoner_name_data, #summonerlevel_data {
+    font-size: 20px; /* Change the font size */
+    color: #333; /* Change the text color */
+    margin-bottom: 10px; /* Add some space below the text */
+    font-family: 'Fracas', sans-serif; /* Change the font family */
+}
+
+#summoner_name_data h3{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black;
+}

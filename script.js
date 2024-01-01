@@ -32,7 +32,7 @@ async function data() {
 
     //Summoner's Name
     summoner_name = dataSummoner_Full.name;
-    document.getElementById("summoner_name_data").innerHTML = "Summoner's Username:"+summoner_name;
+    document.getElementById("summoner_name_data").innerHTML = "<h3>Summoner's Username:</h3> "+summoner_name;
 
     
     //Summoner's Level
