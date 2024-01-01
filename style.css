@@ -17,7 +17,8 @@ body, html {
     border-radius: 10px; /* Adjust as needed */
     padding: 20px; /* Adjust as needed */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow */
-    background: linear-gradient(to right, #005A82, #0AC8B9);
+    background-color: #4158D0;
+    background-image: linear-gradient(0deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
     width: 1000px; /* Adjust as needed */
     height: 1000px; /* Adjust as needed */
 }
@@ -74,11 +75,8 @@ body, html {
     font-size: 2.5em; /* Adjust as needed */
     text-align: center; /* Centers the text */
     font-weight: bold;
-    background: linear-gradient(to right, #d16aff, #660094);
-    /* Clip the background to the text */
-    -webkit-background-clip: text;
-    /* Make the text transparent so the background shows through */
-    color: transparent;
+    font-family: 'Fracas', sans-serif;
+    color: #fff;
 }
 
 #summoner_name {
@@ -87,11 +85,12 @@ body, html {
     border-radius: 5px;
     border: 1px solid #005A82; /* Change the color as needed */
     background-color: #fff; /* Change the color as needed */
+    transform: translate(30px, -10px);
 }
 
 #summoner_name:focus {
     outline: none; /* Removes the default blue outline */
-    border: 1px solid purple; /* Change the color as needed */
+    border: 2px solid  rgba(6, 64, 172, 0.384); /* Change the color as needed */
 }
 
 #choose_region {
@@ -100,26 +99,50 @@ body, html {
     border: 1px solid #005A82; /* Change the color as needed */
     background-color: #fff; /* Change the color as needed */
     font-size: .8rem;
-    transform: translateY(-3px);
+    transform: translate(28px, -12px);
+}
+
+#choose_region:focus {
+    outline: none; /* Removes the default blue outline */
+    border: 2px solid  rgba(6, 64, 172, 0.384); /* Change the color as needed */
 }
 
 #search_button {
     padding: 10px 20px; /* Adjust as needed */
     border-radius: 5px; /* Adjust as needed */
     border: none; /* Removes the default border */
-    background-color: #0AC8B9; /* Change the color as needed */
+    background-color:  rgba(6, 64, 172, 0.384); /* Change the color as needed */
     color: #fff; /* Change the color as needed */
     cursor: pointer; /* Changes the cursor to a hand when hovering over the button */
     margin-top: 10px;
+    font-size: 1rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#search_button:hover {
+    background-color: rgba(6, 64, 172, 0.7); /* Darken the button color when hovered */
+}
+
+#search_button:active {
+    transform: scale(0.95); /* Slightly reduce the size of the button when clicked */
 }
 
 .summonerInfo-container {
+    display: none;
     /* Other styles... */
-    transform: translate(-230px, 280px);
+    transform: translate(-230px, 450px);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #000; /* Change the color as needed */
+    border-radius: 10px; /* Adjust as needed */
+    padding: 20px; /* Adjust as needed */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow */
+    background-color: rgba(6, 64, 172, 0.384); /* Change the color as needed */
 }
 
 .main-rank{
-    transform: translateX(250px);
+    transform: translateX(250px);  
 }
 
 .rank-container1{
@@ -138,6 +161,33 @@ body, html {
     background-color: #fff; /* Change the color as needed */
 }
 
+#rank-container1 {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #000; /* Change the color as needed */
+    border-radius: 10px; /* Adjust as needed */
+    padding: 20px; /* Adjust as needed */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow */
+    background-color: rgba(6, 64, 172, 0.384); /* Change the color as needed */
+}
+
+#rank-container2 {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #000; /* Change the color as needed */
+    border-radius: 10px; /* Adjust as needed */
+    padding: 20px; /* Adjust as needed */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow */
+    background-color: #fff; /* Change the color as needed */
+    margin-bottom: 20px;
+    background-color: rgba(6, 64, 172, 0.384); /* Change the color as needed */
+
+}
+
 #rank-container1 img {
     width: 50px; /* Adjust as needed */
     height: 50px; /* Adjust as needed */
@@ -149,6 +199,7 @@ body, html {
 }
 
 #summoner_name_data, #summonerlevel_data {
+    display: none;
     font-size: 20px; /* Change the font size */
     color: #333; /* Change the text color */
     margin-bottom: 10px; /* Add some space below the text */
@@ -160,4 +211,24 @@ body, html {
     font-weight: bold;
     margin-bottom: 10px;
     color: black;
+}
+
+.tier {
+    color: #333; 
+}
+
+.rank {
+    color: #666; 
+}
+
+.lp {
+    color: #999; 
+}
+
+.wins {
+    color: #0f0; 
+}
+
+.losses {
+    color: #f00; 
 }

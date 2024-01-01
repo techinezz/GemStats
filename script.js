@@ -1,4 +1,4 @@
-var API_key = "RGAPI-ebea38e4-16a8-469c-a4c3-c8aabdf43c06";
+var API_key = "RGAPI-3c0d038b-a945-4591-9dec-5bcad2f36793";
 var server_url = "";
 var summoner_name = "";
 var RegionName = "";
@@ -63,14 +63,22 @@ async function data() {
 
  // Iterate over rankedData
 for (let i = startIndex; i < rankedData.length; i++) {
-    const { tier, rank, wins, losses, leaguePoints } = rankedData[i];
+    const { queueType, tier, rank, wins, losses, leaguePoints } = rankedData[i];
+
+    // Determine the container to update based on the queueType
+    let containerIndex;
+    if (queueType === 'RANKED_SOLO_5x5') {
+        containerIndex = 1;
+    } else {
+        containerIndex = 2;
+    }
 
     // Create a new div element for each rank
     let div = document.createElement('div');
-    div.innerHTML = `Tier: ${tier}, Rank: ${rank}, LP: ${leaguePoints}, Wins: ${wins}, Losses: ${losses}`;
+    div.innerHTML = `<span class="tier">Tier: ${tier}</span>, <span class="rank">Rank: ${rank}</span>, <span class="lp">LP: ${leaguePoints}</span>, <span class="wins">Wins: ${wins}</span>, <span class="losses">Losses: ${losses}</span>`;
 
     // Append the new div element to the summoner_ranked_data element
-    document.getElementById("summoner_ranked_data" + (i - startIndex + 1)).appendChild(div);
+    document.getElementById("summoner_ranked_data" + containerIndex).appendChild(div);
 
     // Create a new img element for each rank
     let img = document.createElement('img');
@@ -78,7 +86,19 @@ for (let i = startIndex; i < rankedData.length; i++) {
     img.src = rankImagePath + "?time=" + new Date().getTime();
 
     // Append the new img element to the rank_image element
-    document.getElementById("rank_image" + (i - startIndex + 1)).appendChild(img);
+    document.getElementById("rank_image" + containerIndex).appendChild(img);
+    
+    document.getElementById("summoner_name_data").style.display = 'block';
+    document.getElementById("summonerlevel_data").style.display = 'flex';
+    document.getElementById("summonerprofile_picture").style.display = 'flex';
+    for (let i = 1; i <= 2; i++) {
+        document.getElementById("summoner_ranked_data" + i).style.display = 'flex';
+        document.getElementById("rank_image" + i).style.display = 'flex';
+    }
+
+    document.querySelector('.summonerInfo-container').style.display = 'flex';
+    document.getElementById("rank-container1").style.display = 'flex';
+    document.getElementById("rank-container2").style.display = 'flex';
 }
 }
     
