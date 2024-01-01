@@ -138,7 +138,12 @@ body, html {
     background-color: #fff; /* Change the color as needed */
 }
 
-#rank-container img {
+#rank-container1 img {
+    width: 50px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+}
+
+#rank-container2 img {
     width: 50px; /* Adjust as needed */
     height: 50px; /* Adjust as needed */
 }

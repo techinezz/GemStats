@@ -52,30 +52,36 @@ async function data() {
     const rankedData = await rankedDataResponse.json();
     console.log(rankedData);
     
-    // Ranked data
-    const { tier: tier1, rank: rank1, wins: wins1, losses: losses1, leaguePoints: leaguePoints1 } = rankedData[0];
-    document.getElementById("summoner_ranked_data1").innerHTML = `Tier: ${tier1.toLowerCase()}, Rank: ${rank1}, LP: ${leaguePoints1}, Wins: ${wins1}, Losses: ${losses1}`;
-    
-    const { tier: tier2, rank: rank2, wins: wins2, losses: losses2, leaguePoints: leaguePoints2 } = rankedData[1];
-    document.getElementById("summoner_ranked_data2").innerHTML = `<br>Tier: ${tier2}, Rank: ${rank2}, LP: ${leaguePoints2}, Wins: ${wins2}, Losses: ${losses2}`;
-
-    //Rank Image for Ranked Solo
-    var rankImageElement = document.getElementById("rank_image1");
-    var rankImagePath = "rankimages/" + tier1.toLowerCase() + ".png";
-    rankImageElement.src = rankImagePath + "?time=" + new Date().getTime();
-
-    //Rank Image for Ranked Flex
-    var rankImageElement = document.getElementById("rank_image2");
-    var rankImagePath = "rankimages/" + tier2.toLowerCase() + ".png";
-    rankImageElement.src = rankImagePath + "?time=" + new Date().getTime();
-
-    //Show rank containers
-    const rankContainers = document.querySelectorAll('.rank-container');
-    for (const container of rankContainers) {
-        container.style.display = 'block';
+    // Clear existing data
+    for (let i = 1; i <= 2; i++) {
+        document.getElementById("summoner_ranked_data" + i).innerHTML = '';
+        document.getElementById("rank_image" + i).innerHTML = ''; // Clear rank images
     }
 
-    const summonerInfoDiv = document.querySelector('.summonerInfo');
-    summonerInfoDiv.style.display = 'block';
+    // Determine the start index based on the number of ranks
+    let startIndex = rankedData.length === 3 ? 1 : 0;
 
+ // Iterate over rankedData
+for (let i = startIndex; i < rankedData.length; i++) {
+    const { tier, rank, wins, losses, leaguePoints } = rankedData[i];
+
+    // Create a new div element for each rank
+    let div = document.createElement('div');
+    div.innerHTML = `Tier: ${tier}, Rank: ${rank}, LP: ${leaguePoints}, Wins: ${wins}, Losses: ${losses}`;
+
+    // Append the new div element to the summoner_ranked_data element
+    document.getElementById("summoner_ranked_data" + (i - startIndex + 1)).appendChild(div);
+
+    // Create a new img element for each rank
+    let img = document.createElement('img');
+    var rankImagePath = "rankimages/" + tier + ".png";
+    img.src = rankImagePath + "?time=" + new Date().getTime();
+
+    // Append the new img element to the rank_image element
+    document.getElementById("rank_image" + (i - startIndex + 1)).appendChild(img);
 }
+}
+    
+
+
+
