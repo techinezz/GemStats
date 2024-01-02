@@ -79,7 +79,7 @@ for (let i = startIndex; i < 2; i++) {
 
     // Create a new div element for each rank
     let div = document.createElement('div');
-    div.innerHTML = `<div class="tier">${tier}</div>
+    div.innerHTML = `<div class="tier">${tier.toLowerCase()}</div>
                     <div class="rank">Rank: ${rank}</div>
                     <div class="lp">LP: ${leaguePoints}</div>
                     <div class="wins">Wins: ${wins}</div>
