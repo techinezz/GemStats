@@ -32,13 +32,12 @@ async function data() {
 
     //Summoner's Name
     summoner_name = dataSummoner_Full.name;
-    document.getElementById("summoner_name_data").innerHTML = "<h3>Summoner's Username:</h3> "+summoner_name;
+    document.getElementById("summoner_name_data").innerHTML = "<h3>Summoner's Username:</h3> <span class='summonerName'>" + summoner_name + "</span>";
 
-    
     //Summoner's Level
     var summoner_Level = dataSummoner_Full.summonerLevel;
     console.log(summoner_Level);
-    document.getElementById("summonerlevel_data").innerHTML = summoner_name+"'s level is: "+summoner_Level;
+    document.getElementById("summonerlevel_data").innerHTML = "Account level is: <span class='summonerLevel'>" + summoner_Level + "</span>";
 
     //Summoner's Profile Picture
     var profile_pic_number = dataSummoner_Full.profileIconId;
@@ -65,6 +64,10 @@ async function data() {
 for (let i = startIndex; i < rankedData.length; i++) {
     const { queueType, tier, rank, wins, losses, leaguePoints } = rankedData[i];
 
+    // Calculate win percentage
+    const totalGames = wins + losses;
+    const winPercentage = (wins / totalGames) * 100;
+
     // Determine the container to update based on the queueType
     let containerIndex;
     if (queueType === 'RANKED_SOLO_5x5') {
@@ -73,9 +76,14 @@ for (let i = startIndex; i < rankedData.length; i++) {
         containerIndex = 2;
     }
 
-    // Create a new div element for each rank
-    let div = document.createElement('div');
-    div.innerHTML = `<span class="tier">Tier: ${tier}</span>, <span class="rank">Rank: ${rank}</span>, <span class="lp">LP: ${leaguePoints}</span>, <span class="wins">Wins: ${wins}</span>, <span class="losses">Losses: ${losses}</span>`;
+// Create a new div element for each rank
+let div = document.createElement('div');
+div.innerHTML = `<div class="tier">${tier}</div>
+                 <div class="rank">Rank: ${rank}</div>
+                 <div class="lp">LP: ${leaguePoints}</div>
+                 <div class="wins">Wins: ${wins}</div>
+                 <div class="losses">Losses: ${losses}</div>
+                 <div class="winPercentage">Win Percentage: ${winPercentage.toFixed(2)}%</div>`;
 
     // Append the new div element to the summoner_ranked_data element
     document.getElementById("summoner_ranked_data" + containerIndex).appendChild(div);
@@ -99,7 +107,13 @@ for (let i = startIndex; i < rankedData.length; i++) {
     document.querySelector('.summonerInfo-container').style.display = 'flex';
     document.getElementById("rank-container1").style.display = 'flex';
     document.getElementById("rank-container2").style.display = 'flex';
+
 }
+    // Add class to summoner_name_data
+    document.getElementById("summoner_name_data").classList.add("summonerName");
+
+    // Add class to summonerlevel_data
+    document.getElementById("summonerlevel_Level").classList.add("sommonerLevel");
 }
     
 

@@ -10,9 +10,6 @@ body, html {
 
 .card-container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     border: 1px solid #000; /* Change the color as needed */
     border-radius: 10px; /* Adjust as needed */
     padding: 20px; /* Adjust as needed */
@@ -34,8 +31,9 @@ body, html {
     background-image: url('images/gemLogo.jpg');
     background-size: cover;
     background-position: center;
-    width: 1000px; /* Adjust as needed */
+    width: 1040px; /* Adjust as needed */
     height: 280px; /* Adjust as needed */
+    transform: translate(-20px, -20px);
 }
 
 .logo {
@@ -68,7 +66,6 @@ body, html {
     justify-content: center;
     align-items: center;
     padding: 20px; /* Adjust as needed */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
 }
 
 .input-group h2 {
@@ -77,6 +74,7 @@ body, html {
     font-weight: bold;
     font-family: 'Fracas', sans-serif;
     color: #fff;
+    transform: translateY(-40px);
 }
 
 #summoner_name {
@@ -85,7 +83,7 @@ body, html {
     border-radius: 5px;
     border: 1px solid #005A82; /* Change the color as needed */
     background-color: #fff; /* Change the color as needed */
-    transform: translate(30px, -10px);
+    transform: translate(30px, -50px);
 }
 
 #summoner_name:focus {
@@ -99,7 +97,7 @@ body, html {
     border: 1px solid #005A82; /* Change the color as needed */
     background-color: #fff; /* Change the color as needed */
     font-size: .8rem;
-    transform: translate(28px, -12px);
+    transform: translate(28px, -52px);
 }
 
 #choose_region:focus {
@@ -117,20 +115,28 @@ body, html {
     margin-top: 10px;
     font-size: 1rem;
     transition: background-color 0.2s ease-in-out;
+    margin-top: -40px;
 }
 
 #search_button:hover {
     background-color: rgba(6, 64, 172, 0.7); /* Darken the button color when hovered */
 }
 
-#search_button:active {
-    transform: scale(0.95); /* Slightly reduce the size of the button when clicked */
+.summonerInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 1020px;
+    width: 1040px;
+
 }
+
 
 .summonerInfo-container {
     display: none;
     /* Other styles... */
-    transform: translate(-230px, 450px);
+    transform: translate(-290px, 420px);
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -139,66 +145,75 @@ body, html {
     padding: 20px; /* Adjust as needed */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow */
     background-color: rgba(6, 64, 172, 0.384); /* Change the color as needed */
+    max-height: 300px;
+    max-width: 300px;
 }
 
 .main-rank{
     transform: translateX(250px);  
 }
 
-.rank-container1{
-    margin-bottom: 20px;
-}
-
-#rank-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border: 1px solid #000; /* Change the color as needed */
-    border-radius: 10px; /* Adjust as needed */
-    padding: 20px; /* Adjust as needed */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow */
-    background-color: #fff; /* Change the color as needed */
-}
 
 #rank-container1 {
     display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     border: 1px solid #000; /* Change the color as needed */
     border-radius: 10px; /* Adjust as needed */
     padding: 20px; /* Adjust as needed */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 1); /* Optional: Adds a subtle shadow */
+    background-color: #fff; /* Change the color as needed */
+    margin-bottom: 20px;
     background-color: rgba(6, 64, 172, 0.384); /* Change the color as needed */
+    transform: translate(-20px, 60px);
+
 }
 
 #rank-container2 {
     display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     border: 1px solid #000; /* Change the color as needed */
     border-radius: 10px; /* Adjust as needed */
     padding: 20px; /* Adjust as needed */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 1); /* Optional: Adds a subtle shadow */
     background-color: #fff; /* Change the color as needed */
     margin-bottom: 20px;
     background-color: rgba(6, 64, 172, 0.384); /* Change the color as needed */
+    transform: translate(-20px,60px);
 
+}
+
+.rank1-title{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    transform: translate(-10px, -40px);
+}
+
+.rank2-title{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    transform: translate(-10px, -40px);
 }
 
 #rank-container1 img {
-    width: 50px; /* Adjust as needed */
-    height: 50px; /* Adjust as needed */
+    width: 100px; /* Adjust as needed */
+    height: 100px; /* Adjust as needed */
+    transform: translate(-375px, 40px);
 }
 
 #rank-container2 img {
-    width: 50px; /* Adjust as needed */
-    height: 50px; /* Adjust as needed */
+    width: 100px; /* Adjust as needed */
+    height: 100px; /* Adjust as needed */
+    transform: translate(-375px, 40px);
 }
 
 #summoner_name_data, #summonerlevel_data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     display: none;
     font-size: 20px; /* Change the font size */
     color: #333; /* Change the text color */
@@ -207,28 +222,104 @@ body, html {
 }
 
 #summoner_name_data h3{
+    position: relative;
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 10px;
     color: black;
+    transform: translateY(-60px);
+}
+
+#summonerprofilepic_data img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transform: translateY(20px);
+
+}
+
+#summonerlevel_data{
+    margin-top: 50px;
+}
+
+#summoner_ranked_data1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    font-size: 20px; /* Change the font size */
+    color: #333; /* Change the text color */
+    margin-bottom: 10px; /* Add some space below the text */
+    font-family: 'Fracas', sans-serif; /* Change the font family */
+}
+
+#summoner_ranked_data2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    font-size: 20px; /* Change the font size */
+    color: #333; /* Change the text color */
+    margin-bottom: 10px; /* Add some space below the text */
+    font-family: 'Fracas', sans-serif; /* Change the font family */
+}
+
+
+
+.summonerName{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: -60px;
+}
+
+.summonerLevel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-left: 10px;
 }
 
 .tier {
-    color: #333; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 
 .rank {
-    color: #666; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; 
 }
 
 .lp {
-    color: #999; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; 
 }
 
 .wins {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #0f0; 
 }
 
 .losses {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #f00; 
+}
+
+.winPercentage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; 
 }
