@@ -61,52 +61,59 @@ async function data() {
     let startIndex = rankedData.length === 3 ? 1 : 0;
 
  // Iterate over rankedData
-for (let i = startIndex; i < rankedData.length; i++) {
-    const { queueType, tier, rank, wins, losses, leaguePoints } = rankedData[i];
+for (let i = startIndex; i < 2; i++) {
+    if(i < rankedData.length) {
+        const { queueType, tier, rank, wins, losses, leaguePoints } = rankedData[i];
 
-    // Calculate win percentage
-    const totalGames = wins + losses;
-    const winPercentage = (wins / totalGames) * 100;
+        // Calculate win percentage
+        const totalGames = wins + losses;
+        const winPercentage = (wins / totalGames) * 100;
 
-    // Determine the container to update based on the queueType
-    let containerIndex;
-    if (queueType === 'RANKED_SOLO_5x5') {
-        containerIndex = 1;
+        // Determine the container to update based on the queueType
+        let containerIndex;
+        if (queueType === 'RANKED_SOLO_5x5') {
+            containerIndex = 1;
+        } else {
+            containerIndex = 2;
+        }
+
+    // Create a new div element for each rank
+    let div = document.createElement('div');
+    div.innerHTML = `<div class="tier">${tier}</div>
+                    <div class="rank">Rank: ${rank}</div>
+                    <div class="lp">LP: ${leaguePoints}</div>
+                    <div class="wins">Wins: ${wins}</div>
+                    <div class="losses">Losses: ${losses}</div>
+                    <div class="winPercentage">Win Percentage: ${winPercentage.toFixed(2)}%</div>`;
+
+        // Append the new div element to the summoner_ranked_data element
+        document.getElementById("summoner_ranked_data" + containerIndex).appendChild(div);
+
+        // Create a new img element for each rank
+        let img = document.createElement('img');
+        var rankImagePath = "rankimages/" + tier + ".png";
+        img.src = rankImagePath + "?time=" + new Date().getTime();
+
+        // Append the new img element to the rank_image element
+        document.getElementById("rank_image" + containerIndex).appendChild(img);
+        
+        document.getElementById("summoner_name_data").style.display = 'block';
+        document.getElementById("summonerlevel_data").style.display = 'flex';
+        document.getElementById("summonerprofile_picture").style.display = 'flex';
+        for (let i = 1; i <= 2; i++) {
+            document.getElementById("summoner_ranked_data" + i).style.display = 'flex';
+            document.getElementById("rank_image" + i).style.display = 'flex';
+        }
+
+        document.querySelector('.summonerInfo-container').style.display = 'flex';
+        document.getElementById("rank-container1").style.display = 'flex';
+        document.getElementById("rank-container2").style.display = 'flex';
+
     } else {
-        containerIndex = 2;
+        // Display "Unranked" for rank 2 if it doesn't exist
+        document.getElementById("summoner_ranked_data2").innerHTML = '<span class="unranked">Unranked</span>';
+        document.getElementById("rank_image2").innerHTML = ''; // Clear rank image 2 if it doesn't exist
     }
-
-// Create a new div element for each rank
-let div = document.createElement('div');
-div.innerHTML = `<div class="tier">${tier}</div>
-                 <div class="rank">Rank: ${rank}</div>
-                 <div class="lp">LP: ${leaguePoints}</div>
-                 <div class="wins">Wins: ${wins}</div>
-                 <div class="losses">Losses: ${losses}</div>
-                 <div class="winPercentage">Win Percentage: ${winPercentage.toFixed(2)}%</div>`;
-
-    // Append the new div element to the summoner_ranked_data element
-    document.getElementById("summoner_ranked_data" + containerIndex).appendChild(div);
-
-    // Create a new img element for each rank
-    let img = document.createElement('img');
-    var rankImagePath = "rankimages/" + tier + ".png";
-    img.src = rankImagePath + "?time=" + new Date().getTime();
-
-    // Append the new img element to the rank_image element
-    document.getElementById("rank_image" + containerIndex).appendChild(img);
-    
-    document.getElementById("summoner_name_data").style.display = 'block';
-    document.getElementById("summonerlevel_data").style.display = 'flex';
-    document.getElementById("summonerprofile_picture").style.display = 'flex';
-    for (let i = 1; i <= 2; i++) {
-        document.getElementById("summoner_ranked_data" + i).style.display = 'flex';
-        document.getElementById("rank_image" + i).style.display = 'flex';
-    }
-
-    document.querySelector('.summonerInfo-container').style.display = 'flex';
-    document.getElementById("rank-container1").style.display = 'flex';
-    document.getElementById("rank-container2").style.display = 'flex';
 
 }
     // Add class to summoner_name_data
