@@ -10,14 +10,14 @@ body, html {
 
 .card-container {
     display: flex;
-    border: 1px solid #000; /* Change the color as needed */
-    border-radius: 10px; /* Adjust as needed */
-    padding: 20px; /* Adjust as needed */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow */
+    border: 1px solid #000; 
+    border-radius: 10px; 
+    padding: 20px; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); 
     background-color: #4158D0;
     background-image: linear-gradient(0deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-    width: 1000px; /* Adjust as needed */
-    height: 1000px; /* Adjust as needed */
+    width: 1000px; 
+    height: 1000px; 
 }
 
 .search-section {
@@ -31,32 +31,28 @@ body, html {
     background-image: url('images/gemLogo.jpg');
     background-size: cover;
     background-position: center;
-    width: 1040px; /* Adjust as needed */
-    height: 280px; /* Adjust as needed */
+    width: 1040px;
+    height: 280px;
     transform: translate(-20px, -20px);
 }
 
 .logo {
     font-weight: bold;
     font-family: 'Fracas', sans-serif;
-    font-size: 6em; /* Adjust as needed */
+    font-size: 6em;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .logo-part1 {
-    transform: translateX(-60px); /* Adjust as needed */
+    transform: translateX(-60px);
     color: purple;
 }
 
 .logo-part2 {
     transform: translateX(100px);
-    /* Create a background gradient */
     background: linear-gradient(to right, #785A28, #C89B3C);
-    /* Clip the background to the text */
     -webkit-background-clip: text;
-
-    /* Make the text transparent so the background shows through */ 
     color: transparent;
 }
 
@@ -65,12 +61,12 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px; /* Adjust as needed */
+    padding: 20px; 
 }
 
 .input-group h2 {
-    font-size: 2.5em; /* Adjust as needed */
-    text-align: center; /* Centers the text */
+    font-size: 2.5em;
+    text-align: center; 
     font-weight: bold;
     font-family: 'Fracas', sans-serif;
     color: #fff;
@@ -81,37 +77,37 @@ body, html {
     font-size: 1.3rem;
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #005A82; /* Change the color as needed */
-    background-color: #fff; /* Change the color as needed */
+    border: 1px solid #005A82;
+    background-color: #fff; 
     transform: translate(30px, -50px);
 }
 
 #summoner_name:focus {
-    outline: none; /* Removes the default blue outline */
-    border: 2px solid  rgba(6, 64, 172, 0.384); /* Change the color as needed */
+    outline: none; 
+    border: 2px solid  rgba(6, 64, 172, 0.384); 
 }
 
 #choose_region {
-    padding: 13px; /* Adjust as needed */
-    border-radius: 5px; /* Adjust as needed */
-    border: 1px solid #005A82; /* Change the color as needed */
-    background-color: #fff; /* Change the color as needed */
+    padding: 13px;
+    border-radius: 5px; 
+    border: 1px solid #005A82; 
+    background-color: #fff; 
     font-size: .8rem;
     transform: translate(28px, -52px);
 }
 
 #choose_region:focus {
-    outline: none; /* Removes the default blue outline */
-    border: 2px solid  rgba(6, 64, 172, 0.384); /* Change the color as needed */
+    outline: none; 
+    border: 2px solid  rgba(6, 64, 172, 0.384); 
 }
 
 #search_button {
-    padding: 10px 20px; /* Adjust as needed */
-    border-radius: 5px; /* Adjust as needed */
-    border: none; /* Removes the default border */
-    background-color:  rgba(6, 64, 172, 0.384); /* Change the color as needed */
-    color: #fff; /* Change the color as needed */
-    cursor: pointer; /* Changes the cursor to a hand when hovering over the button */
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    border: none; 
+    background-color:  rgba(6, 64, 172, 0.384); 
+    color: #fff; 
+    cursor: pointer; 
     margin-top: 10px;
     font-size: 1rem;
     transition: background-color 0.2s ease-in-out;
@@ -119,7 +115,7 @@ body, html {
 }
 
 #search_button:hover {
-    background-color: rgba(6, 64, 172, 0.7); /* Darken the button color when hovered */
+    background-color: rgba(6, 64, 172, 0.7);
 }
 
 .summonerInfo{
@@ -135,16 +131,15 @@ body, html {
 
 .summonerInfo-container {
     display: none;
-    /* Other styles... */
     transform: translate(-290px, 420px);
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border: 1px solid #000; /* Change the color as needed */
-    border-radius: 10px; /* Adjust as needed */
-    padding: 20px; /* Adjust as needed */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow */
-    background-color: rgba(6, 64, 172, 0.384); /* Change the color as needed */
+    border: 1px solid #000;
+    border-radius: 10px; 
+    padding: 20px; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    background-color: rgba(6, 64, 172, 0.384);
     max-height: 300px;
     max-width: 300px;
 }
@@ -156,26 +151,26 @@ body, html {
 
 #rank-container1 {
     display: none;
-    border: 1px solid #000; /* Change the color as needed */
-    border-radius: 10px; /* Adjust as needed */
-    padding: 20px; /* Adjust as needed */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 1); /* Optional: Adds a subtle shadow */
-    background-color: #fff; /* Change the color as needed */
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 1);
+    background-color: #fff;
     margin-bottom: 20px;
-    background-color: rgba(6, 64, 172, 0.384); /* Change the color as needed */
+    background-color: rgba(6, 64, 172, 0.384);
     transform: translate(-20px, 60px);
 
 }
 
 #rank-container2 {
     display: none;
-    border: 1px solid #000; /* Change the color as needed */
-    border-radius: 10px; /* Adjust as needed */
-    padding: 20px; /* Adjust as needed */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 1); /* Optional: Adds a subtle shadow */
-    background-color: #fff; /* Change the color as needed */
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 1);
+    background-color: #fff; 
     margin-bottom: 20px;
-    background-color: rgba(6, 64, 172, 0.384); /* Change the color as needed */
+    background-color: rgba(6, 64, 172, 0.384);
     transform: translate(-20px,60px);
 
 }
@@ -199,14 +194,14 @@ body, html {
 }
 
 #rank-container1 img {
-    width: 100px; /* Adjust as needed */
-    height: 100px; /* Adjust as needed */
+    width: 100px;
+    height: 100px;
     transform: translate(-375px, 40px);
 }
 
 #rank-container2 img {
-    width: 100px; /* Adjust as needed */
-    height: 100px; /* Adjust as needed */
+    width: 100px; 
+    height: 100px; 
     transform: translate(-375px, 40px);
 }
 
@@ -215,10 +210,10 @@ body, html {
     justify-content: center;
     align-items: center;
     display: none;
-    font-size: 20px; /* Change the font size */
-    color: #333; /* Change the text color */
-    margin-bottom: 10px; /* Add some space below the text */
-    font-family: 'Fracas', sans-serif; /* Change the font family */
+    font-size: 20px;
+    color: #333; 
+    margin-bottom: 10px; 
+    font-family: 'Fracas', sans-serif; 
 }
 
 #summoner_name_data h3{
@@ -248,10 +243,10 @@ body, html {
     justify-content: center;
     align-items: center;
     display: none;
-    font-size: 20px; /* Change the font size */
-    color: #333; /* Change the text color */
-    margin-bottom: 10px; /* Add some space below the text */
-    font-family: 'Fracas', sans-serif; /* Change the font family */
+    font-size: 20px;
+    color: #333; 
+    margin-bottom: 10px; 
+    font-family: 'Fracas', sans-serif; 
 }
 
 #summoner_ranked_data2{
@@ -259,10 +254,10 @@ body, html {
     justify-content: center;
     align-items: center;
     display: none;
-    font-size: 20px; /* Change the font size */
-    color: #333; /* Change the text color */
-    margin-bottom: 10px; /* Add some space below the text */
-    font-family: 'Fracas', sans-serif; /* Change the font family */
+    font-size: 20px;
+    color: #333; 
+    margin-bottom: 10px; 
+    font-family: 'Fracas', sans-serif; 
 }
 
 .unranked{
